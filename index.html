@@ -143,6 +143,10 @@
 
         itemList.forEach(item=>{
             item.classList.add("Highlight");
+           item.addEventListener('click', function() {
+            var title = this.getAttribute('title');
+            document.getElementById('tooltip').textContent = title;
+        });
         })
 
         const dayToday = today.getDay();
